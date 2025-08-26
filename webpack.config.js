@@ -13,6 +13,14 @@ module.exports = {
     devtool: "eval-source-map",
     devServer: {
         watchFiles: ["./src/template.html"],
+        hot: false,
+        liveReload: false,
+        proxy: {
+            '/api': {
+                target: "http://localhost:8080",
+                changeOrigin: true,
+            }
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({
