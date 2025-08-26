@@ -3,6 +3,11 @@
     font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif
 }
 
+.weatherAlertContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .weatherAlert {
     width: fit-content;
 
@@ -30,4 +35,21 @@
 
 .weatherAlert.RedFlagWarning {
     background-color: red;
+}
+
+.conditionsContainer {
+    width: fit-content;
+
+    padding: 1rem;
+
+    font-family: Verdana, Tahoma, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    color: antiquewhite;
+    background-color: lightyellow;
+
+    border: 1px solid black;
+    border-radius: 10px;
 }
