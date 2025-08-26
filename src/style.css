@@ -3,6 +3,11 @@
     font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif
 }
 
+.weatherAlertsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
 .weatherAlertContainer {
     display: flex;
     flex-direction: column;
@@ -38,6 +43,9 @@
 }
 
 .conditionsContainer {
+    display: flex;
+    flex-direction: column;
+
     width: fit-content;
 
     padding: 1rem;
@@ -49,6 +57,35 @@
 
     color: antiquewhite;
     background-color: lightyellow;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.conditionsContainer > div {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.conditionsContainer > div > .icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.conditionsContainer > span {
+    width: fit-content;
+
+    padding: 1rem;
+
+    font-family: Verdana, Tahoma, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-shadow: -0.75px -0.75px 0 #000, 0.75px -0.75px 0 #000, -0.75px 0.75px 0 #000, 0.75px 0.75px 0 #000;
+
+    color: antiquewhite;
+    background-color: white;
 
     border: 1px solid black;
     border-radius: 10px;

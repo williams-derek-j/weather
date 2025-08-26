@@ -13,7 +13,7 @@ module.exports = {
     devtool: "eval-source-map",
     devServer: {
         watchFiles: ["./src/index.js"],
-        liveReload: false,
+        // liveReload: false,
         // proxy: [
         //     {
         //     context: ['/api'],
