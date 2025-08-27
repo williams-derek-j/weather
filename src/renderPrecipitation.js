@@ -5,12 +5,13 @@ export default function renderPrecipitation(obj, container) {
 
         container.appendChild(precip)
 
-        if (obj.preciptype) {
-            const precipType = document.createElement('span')
-            precipType.textContent = `Type: ${obj.preciptype}`
-
-            container.appendChild(precipType)
-        }
+        // if (obj.preciptype) {
+        //     const precipType = document.createElement('span')
+        //
+        //     precipType.textContent = `Type: ${obj.preciptype.join(', ')}`
+        //
+        //     container.appendChild(precipType)
+        // }
     } else {
         if (obj.precipprob >= 0) {
             const precipProb = document.createElement('span')

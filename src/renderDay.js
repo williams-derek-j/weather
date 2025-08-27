@@ -5,7 +5,7 @@ import renderFeelsLike from './renderFeelsLike.js'
 import renderHumidity from './renderHumidity.js'
 import renderPrecipitation from './renderPrecipitation.js'
 
-export default function(obj, container) {
+export default function(obj, container, settings) {
     const conditionsContainer = document.createElement('div');
     conditionsContainer.classList.add('conditionsContainer')
 
@@ -32,25 +32,27 @@ export default function(obj, container) {
         renderConditions(obj.conditions, conditionsContainer)
     }
 
-    if (obj.temp) {
+    if (settings.temp) {
         renderTemp(obj.temp, conditionsContainer)
     }
 
-    if (obj.feelslike) {
+    if (settings.feelslike) {
         renderFeelsLike(obj.feelslike, conditionsContainer)
     }
 
-    if (obj.humidity) {
+    if (settings.humidity) {
         renderHumidity(obj.humidity, conditionsContainer)
     }
 
-    renderPrecipitation({
-            precip: obj.precip,
-        preciptype: obj.preciptype,
-        precipprob: obj.precipprob,
-        },
-        conditionsContainer
-    )
+    if (settings.precipitation) {
+        renderPrecipitation({
+                precip: obj.precip,
+            preciptype: obj.preciptype,
+            precipprob: obj.precipprob,
+            },
+            conditionsContainer
+        )
+    }
 
     console.log(conditionsContainer)
     container.appendChild(conditionsContainer)

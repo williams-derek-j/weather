@@ -56,17 +56,17 @@ form > button {
     border-radius: 5px;
 }
 
-#weatherAlertsAll {
+#alertsAll {
     display: flex;
     flex-direction: row;
 }
 
-.weatherAlertContainer {
+.alertContainer {
     display: flex;
     flex-direction: column;
 }
 
-.weatherAlert {
+.alert {
     width: fit-content;
 
     padding: 1rem;
@@ -83,15 +83,15 @@ form > button {
     border-radius: 10px;
 }
 
-.weatherAlert.ExtremeHeatWarning {
+.alert.ExtremeHeatWarning {
     background-color: maroon;
 }
 
-.weatherAlert.HeatAdvisory {
+.alert.HeatAdvisory {
     background-color: darkOrange;
 }
 
-.weatherAlert.RedFlagWarning {
+.alert.RedFlagWarning {
     background-color: red;
 }
 
@@ -133,7 +133,7 @@ form > button {
     border-radius: 10px;
 }
 
-.conditionsContainer > div {
+.conditionsContainer > .titleContainer {
     display: flex;
     flex-direction: row;
 
@@ -160,4 +160,6 @@ form > button {
 
     border: 1px solid black;
     border-radius: 10px;
+
+    white-space: nowrap;
 }

@@ -5,17 +5,20 @@ import renderAlerts from "./renderAlerts.js";
 import renderDay from "./renderDay.js";
 
 const nav = document.querySelector('#nav');
+const alertsAll = document.querySelector('#alertsAll');
 const content = document.querySelector('#content');
+const togglesAll = nav.querySelectorAll('.toggleContainer > input');
 
 document.querySelector('#request').addEventListener('submit', (e) => {
     e.preventDefault();
 
+    clear(alertsAll);
     clear(content);
 
     let location = document.getElementById('location').value;
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=RVW49K3JHR36JZUMBDY4P35HZ&contentType=json`;
 
-    fetchMock(url, {
+    fetch(url, {
         mode: 'cors',
     }).then((response) => {
         console.log(response)
@@ -24,15 +27,21 @@ document.querySelector('#request').addEventListener('submit', (e) => {
     }).then((responseObj) => {
         console.log(responseObj)
 
+        const settings = {};
+        togglesAll.forEach((toggle) => {
+            settings[toggle.id] = toggle.checked;
+        })
+        console.log(settings);
+
         if (responseObj.alerts) {
-            renderAlerts(responseObj.alerts, nav)
+            renderAlerts(responseObj.alerts, alertsAll)
         }
         if (responseObj.currentConditions) {
-            renderDay(responseObj.currentConditions, content)
+            renderDay(responseObj.currentConditions, content, settings)
         }
         if (responseObj.days) {
             responseObj.days.forEach((day) => {
-                renderDay(day, content)
+                renderDay(day, content, settings)
             })
         }
     }).catch((error) => {

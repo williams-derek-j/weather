@@ -1,19 +1,16 @@
 export default function renderAlerts(alerts, container) {
     console.log(alerts)
 
-    const alertsContainer = document.createElement('div')
-    alertsContainer.id = 'weatherAlertsAll';
-
     alerts.forEach((alert) => {
         const alertContainer = document.createElement('div')
-        alertContainer.classList.add('weatherAlertContainer')
+        alertContainer.classList.add('alertContainer')
 
         const alertRender = document.createElement('div')
 
         if (alert.event) {
             console.log(alert.event)
 
-            alertRender.classList.add('weatherAlert')
+            alertRender.classList.add('alert')
             alertRender.classList.add(alert.event.replace(/\s/g, ""))
             alertRender.append(document.createElement('span').textContent = alert.event)
             alertContainer.appendChild(alertRender)
@@ -37,8 +34,6 @@ export default function renderAlerts(alerts, container) {
                 alertContainer.appendChild(timeEnd)
             }
         }
-        alertsContainer.appendChild(alertContainer)
-
-        container.appendChild(alertsContainer)
+        container.appendChild(alertContainer)
     })
 }
