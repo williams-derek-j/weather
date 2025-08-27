@@ -18,6 +18,12 @@ document.querySelector('#request').addEventListener('submit', (e) => {
     let location = document.getElementById('location').value;
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=RVW49K3JHR36JZUMBDY4P35HZ&contentType=json`;
 
+    const settings = {};
+    togglesAll.forEach((toggle) => {
+        settings[toggle.id] = toggle.checked;
+    })
+    console.log(settings);
+
     fetch(url, {
         mode: 'cors',
     }).then((response) => {
@@ -26,12 +32,6 @@ document.querySelector('#request').addEventListener('submit', (e) => {
         return response.json()
     }).then((responseObj) => {
         console.log(responseObj)
-
-        const settings = {};
-        togglesAll.forEach((toggle) => {
-            settings[toggle.id] = toggle.checked;
-        })
-        console.log(settings);
 
         if (responseObj.alerts) {
             renderAlerts(responseObj.alerts, alertsAll)

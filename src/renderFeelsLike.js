@@ -1,6 +1,7 @@
 export default function renderFeelsLike(num, container) {
-    const feelsLike = document.createElement('span')
-    feelsLike.textContent = `Feels Like: ${num}° F`
+    const feelslike = document.createElement('span')
+    feelslike.classList.add('feelslike');
+    feelslike.textContent = `Feels Like: ${num}° F`
 
-    container.appendChild(feelsLike);
+    container.appendChild(feelslike);
 }
