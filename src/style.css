@@ -1,6 +1,8 @@
-.content {
-    font-size: 1em;
-    font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif
+#nav {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
 }
 
 form {
@@ -54,7 +56,7 @@ form > button {
     border-radius: 5px;
 }
 
-.weatherAlertsContainer {
+#weatherAlertsAll {
     display: flex;
     flex-direction: row;
 }
@@ -91,6 +93,23 @@ form > button {
 
 .weatherAlert.RedFlagWarning {
     background-color: red;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+
+    overflow: scroll;
+
+    font-size: 1em;
+    font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
 }
 
 .conditionsContainer {

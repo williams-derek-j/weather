@@ -2,8 +2,9 @@ import "./style.css";
 import clear from "./clear.js";
 import fetchMock from "./fetchMock.js";
 import renderAlerts from "./renderAlerts.js";
-import renderCurrentConditions from "./renderCurrentConditions.js";
+import renderDay from "./renderDay.js";
 
+const nav = document.querySelector('#nav');
 const content = document.querySelector('#content');
 
 document.querySelector('#request').addEventListener('submit', (e) => {
@@ -24,10 +25,15 @@ document.querySelector('#request').addEventListener('submit', (e) => {
         console.log(responseObj)
 
         if (responseObj.alerts) {
-            renderAlerts(responseObj.alerts, content)
+            renderAlerts(responseObj.alerts, nav)
         }
         if (responseObj.currentConditions) {
-            renderCurrentConditions(responseObj.currentConditions, content)
+            renderDay(responseObj.currentConditions, content)
+        }
+        if (responseObj.days) {
+            responseObj.days.forEach((day) => {
+                renderDay(day, content)
+            })
         }
     }).catch((error) => {
         console.log(error)
