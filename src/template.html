@@ -5,35 +5,36 @@
     <title>Title</title>
 </head>
 <body>
-<form id='request'>
-    <div id='togglesAll'>
-        <div class='toggleContainer'>
-            <label for='temp'>Temperature:</label>
-            <input type='checkbox' checked='true' id='temp'>
+<div id='nav'>
+    <form id='request'>
+        <div id='togglesAll'>
+            <div class='toggleContainer'>
+                <label for='temp'>Temperature:</label>
+                <input type='checkbox' checked='checked' id='temp'>
+            </div>
+            <div class='toggleContainer'>
+                <label for='feelsLike'>Feels Like:</label>
+                <input type='checkbox' checked='checked' id='feelsLike'>
+            </div>
+            <div class='toggleContainer'>
+                <label for='humidity'>Humidty:</label>
+                <input type='checkbox' checked='checked' id='humidity'>
+            </div>
+            <div class='toggleContainer'>
+                <label for='precipitation'>Precipitation:</label>
+                <input type='checkbox' checked='checked' id='precipitation'>
+            </div>
         </div>
-        <div class='toggleContainer'>
-            <label for='feelsLike'>Feels Like:</label>
-            <input type='checkbox' checked='true' id='feelsLike'>
-        </div>
-        <div class='toggleContainer'>
-            <label for='humidity'>Humidty:</label>
-            <input type='checkbox' checked='true' id='humidity'>
-        </div>
-        <div class='toggleContainer'>
-            <label for='precipitation'>Precipitation:</label>
-            <input type='checkbox' checked='true' id='precipitation'>
-        </div>
-    </div>
 
-    <div id='locationContainer'>
-        <label for='location'>Location:</label>
-        <input type='text' id='location'>
-    </div>
+        <div id='locationContainer'>
+            <label for='location'>Location:</label>
+            <input type='text' id='location'>
+        </div>
 
-    <button type='submit' id='submit'>Submit</button>
-</form>
-<div id="content">
+        <button type='submit' id='submit'>Submit</button>
+    </form>
 
 </div>
+<div id='content'></div>
 </body>
 </html>

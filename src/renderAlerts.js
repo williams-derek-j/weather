@@ -2,7 +2,7 @@ export default function renderAlerts(alerts, container) {
     console.log(alerts)
 
     const alertsContainer = document.createElement('div')
-    alertsContainer.classList.add('weatherAlertsContainer');
+    alertsContainer.id = 'weatherAlertsAll';
 
     alerts.forEach((alert) => {
         const alertContainer = document.createElement('div')
