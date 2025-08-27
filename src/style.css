@@ -3,6 +3,57 @@
     font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+
+    padding: 0.4rem;
+
+    font-family: Verdana, Tahoma, 'Trebuchet MS', sans-serif;
+
+    background-color: lightyellow;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+form > button {
+    align-self: flex-end;
+}
+
+#togglesAll {
+    display: flex;
+    flex-direction: row;
+}
+
+.toggleContainer {
+    width: fit-content;
+
+    padding: 0.4rem;
+
+    font-family: Verdana, Tahoma, 'Trebuchet MS', sans-serif;
+
+    background-color: whitesmoke;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#locationContainer {
+    width: fit-content;
+
+    padding: 0.4rem;
+
+    font-family: Verdana, Tahoma, 'Trebuchet MS', sans-serif;
+
+    background-color: lightyellow;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 .weatherAlertsContainer {
     display: flex;
     flex-direction: row;
@@ -49,6 +100,7 @@
     width: fit-content;
 
     padding: 1rem;
+    padding-top: 0rem;
 
     font-family: Verdana, Tahoma, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
@@ -84,8 +136,8 @@
     font-weight: 200;
     text-shadow: -0.75px -0.75px 0 #000, 0.75px -0.75px 0 #000, -0.75px 0.75px 0 #000, 0.75px 0.75px 0 #000;
 
-    color: antiquewhite;
-    background-color: white;
+    color: whitesmoke;
+    background-color: darkslategray;
 
     border: 1px solid black;
     border-radius: 10px;

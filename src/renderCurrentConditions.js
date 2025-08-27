@@ -101,7 +101,7 @@ export default function(obj, container) {
     renderPrecipitation({
             precip: obj.precip,
         preciptype: obj.preciptype,
-        precipprob: obj.precipprob
+        precipprob: obj.precipprob,
         },
         conditionsContainer
     )

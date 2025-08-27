@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Title</title>
 </head>
 <body>
-<form id="request">
-    <label for="location">Location:</label>
-    <input type="text" id="location">
-    <button type="submit" id="submit">Submit</button>
+<form id='request'>
+    <div id='togglesAll'>
+        <div class='toggleContainer'>
+            <label for='temp'>Temperature:</label>
+            <input type='checkbox' checked='true' id='temp'>
+        </div>
+        <div class='toggleContainer'>
+            <label for='feelsLike'>Feels Like:</label>
+            <input type='checkbox' checked='true' id='feelsLike'>
+        </div>
+        <div class='toggleContainer'>
+            <label for='humidity'>Humidty:</label>
+            <input type='checkbox' checked='true' id='humidity'>
+        </div>
+        <div class='toggleContainer'>
+            <label for='precipitation'>Precipitation:</label>
+            <input type='checkbox' checked='true' id='precipitation'>
+        </div>
+    </div>
+
+    <div id='locationContainer'>
+        <label for='location'>Location:</label>
+        <input type='text' id='location'>
+    </div>
+
+    <button type='submit' id='submit'>Submit</button>
 </form>
 <div id="content">
 
